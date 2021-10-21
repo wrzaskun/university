@@ -1,4 +1,4 @@
-#include "../catch2/catch.hpp"
+#include "../catch2/catch_amalgamated.hpp"
 #include "../Pesel.hpp"
 #include <algorithm>
 #include <string>

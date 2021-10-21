@@ -8,8 +8,12 @@ set(test
   pesel_test.cpp
   student_test.cpp
   cmain.cpp
-  ../catch2/catch.hpp
+  
+)
+set(catch
+    ../catch2/catch_amalgamated.cpp
 )
 
+add_library(catch_static OBJECT ${catch})
 add_executable(${PROJECT_NAME} ${test})
-target_link_libraries(${PROJECT_NAME} PUBLIC university_static)
+target_link_libraries(${PROJECT_NAME} PUBLIC university_static catch_static)

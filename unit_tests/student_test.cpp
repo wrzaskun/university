@@ -1,4 +1,4 @@
-#include "../catch2/catch.hpp"
+#include "../catch2/catch_amalgamated.hpp"
 #include "../Student.hpp"
 #include <string>
 
@@ -16,13 +16,11 @@ TEST_CASE("student has been created", "[student]")
 		REQUIRE("00410251218" == student.getPesel());
 	}
 
-
 	student.setName("Kasia");
 	student.setSurname("Kowalska");
 	student.setAddress("Warszawa");
 	student.setIndex(1);
 	student.setPesel("57101281951");
-
 
 	SECTION("student class values are changed by setters")
 	{
@@ -34,4 +32,8 @@ TEST_CASE("student has been created", "[student]")
 		REQUIRE("57101281951" == student.getPesel());
 	}
 
+	SECTION("student class values throw exception")
+	{
+		REQUIRE_THROWS_WITH(student.setPesel("57101281952"), "Pesel is wrong.");	
+	}
 }

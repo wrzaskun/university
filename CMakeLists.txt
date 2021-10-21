@@ -12,13 +12,8 @@ set(university_src
         Student.cpp
         Student.hpp
         University.cpp
-        University.hpp
-        Pesel.hpp
         Pesel.cpp
-        IDataBase.hpp
-        DataBaseFile.hpp
         DataBaseFile.cpp
-        Helper.hpp
         Helper.cpp
 )
 
