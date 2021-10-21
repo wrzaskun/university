@@ -16,9 +16,11 @@ set(university_src
         Helper.cpp
 )
 
-add_library(university_static OBJECT ${university_src})
+add_library(university_static STATIC ${university_src}) # change for requirements OBJECT is 30% faster
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} PUBLIC university_static)
+
+enable_testing()
 add_subdirectory(unit_tests)
 
 

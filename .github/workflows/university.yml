@@ -1,0 +1,20 @@
+name: university
+
+on: [push, pull_request]
+
+jobs:
+  university:
+    runs-on: ubuntu-latest
+    env:
+      path: build
+    steps:
+    - name: Check out code
+      uses: actions/checkout@master
+    - name: Compile
+      working-directory: ${{ env.path }}
+      run: |
+        cmake ..
+        make
+    - name: Run tests
+      working-directory: ${{ env.path }}
+      run: ctest -V
