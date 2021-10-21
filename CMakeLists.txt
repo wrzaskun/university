@@ -10,7 +10,6 @@ set(CMAKE_CXX_STANDARD 17)
 
 set(university_src
         Student.cpp
-        Student.hpp
         University.cpp
         Pesel.cpp
         DataBaseFile.cpp
