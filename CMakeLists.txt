@@ -3,7 +3,7 @@ project(University)
 set(CMAKE_CXX_STANDARD 17)
 
  if(MSVC)
-    add_compile_options("/W3 /EHsc")
+    add_compile_options("/D_DEBUG /MTd /Zi /Ob0 /Od /RTC1")
  elseif()
     add_compile_options("-Wall -Wextra -pedantic -Wconversion")
  endif()
